@@ -1,9 +1,5 @@
 ﻿using Domain.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Domain.Entities
 {
@@ -16,5 +12,6 @@ namespace Domain.Entities
 
         public Cliente Cliente { get; set; }
         public Mesa Mesa { get; set; }
+        public ICollection<DetallePedido> DetallesPedido { get; set; }
     }
 }

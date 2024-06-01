@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities;
+
 
 namespace Domain.Interface.Repository
 {
-    internal interface IDetallePedidoRepository
+    public interface IDetallePedidoRepository : IGenericRepository<DetallePedido>
     {
     }
 }
