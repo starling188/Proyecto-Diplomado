@@ -10,7 +10,6 @@ namespace Infraestructure.Extensions
     public static class Extensions
     {
 
-
         public static void ExtensionRepository(this IServiceCollection services , IConfiguration configuration) {
 
             services.AddTransient<IClienteRepository, ClienteRepository>();
@@ -20,8 +19,6 @@ namespace Infraestructure.Extensions
             services.AddTransient<IMenuRepository, MenuRepository>();
             services.AddTransient<IMesaRepository, MesaRepository>();
             services.AddTransient<IPedidoRepository, PedidoRepository>();
-
-            
         }
     }
 }
