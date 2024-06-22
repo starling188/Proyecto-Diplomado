@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\Service\" />
+    <Compile Remove="Interface\Service\**" />
+    <EmbeddedResource Remove="Interface\Service\**" />
+    <None Remove="Interface\Service\**" />
   </ItemGroup>
 
 </Project>

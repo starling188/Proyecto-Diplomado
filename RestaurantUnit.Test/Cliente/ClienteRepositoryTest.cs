@@ -1,6 +1,6 @@
 using Domain.Entities;
 using Domain.Interface.Repository;
-using Infraestructure.Repositories.ClienteRepositoryMock;
+using Infraestructure.Repositories.Mock.Client;
 using Moq;
 using static Infraestructure.Exeception.NotFoundExeception;
 

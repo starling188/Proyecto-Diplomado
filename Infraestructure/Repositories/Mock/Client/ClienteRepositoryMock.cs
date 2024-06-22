@@ -4,7 +4,7 @@ using Domain.Interface.Repository;
 using Infraestructure.Exeception;
 using static Infraestructure.Exeception.NotFoundExeception;
 
-namespace Infraestructure.Repositories.ClienteRepositoryMock
+namespace Infraestructure.Repositories.Mock.Client
 {
     public class ClienteRepositoryMock : IClienteRepository
     {
@@ -36,9 +36,9 @@ namespace Infraestructure.Repositories.ClienteRepositoryMock
             {
                 throw new ArgumentException("La lista de clientes no puede estar vacía");
             }
-            
+
             _clienteList.AddRange(entities);
-            await Task.CompletedTask;   
+            await Task.CompletedTask;
         }
 
         public Task Delete(int id)
@@ -52,13 +52,13 @@ namespace Infraestructure.Repositories.ClienteRepositoryMock
             _clienteList.Remove(cliente);
             return Task.CompletedTask;
         }
-        
+
         public Task<List<Cliente>> GetAll()
         {
             if (_clienteList.Count == 0)
             {
-                 throw new NotFoundException("La lista de clientes no puede estar vacía");
-               
+                throw new NotFoundException("La lista de clientes no puede estar vacía");
+
             }
 
             return Task.FromResult(_clienteList);

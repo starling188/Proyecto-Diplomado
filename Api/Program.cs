@@ -1,6 +1,7 @@
 using Infraestructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Infraestructure.Extensions;
+using Api.DTOs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<RestaurantContext>(options => options.UseSqlServer
 
 builder.Services.ExtensionRepository(builder.Configuration);
 
+builder.Services.AddAutoMapper(typeof(Automaper));
 
 var app = builder.Build();
 
